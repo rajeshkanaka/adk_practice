@@ -137,12 +137,14 @@ cd adk_practice
 1. Go to https://github.com/rajeshkanaka/adk_practice
 2. Click the green "Code" button
 3. Click "Download ZIP"
-4. Extract the ZIP file to your desired location
+4. Extract the ZIP file to your desired location (e.g., `C:\Projects\`)
 5. Open Command Prompt or PowerShell
 6. Navigate to the extracted folder:
    ```cmd
-   cd C:\path\to\adk_practice
+   cd C:\Projects\adk_practice
    ```
+
+**Note**: Make sure you're in the correct directory before proceeding. You should see files like `README.md`, `requirements.txt`, etc.
 
 ### Step 2: Install ADK (Google Agent Development Kit)
 
@@ -368,20 +370,23 @@ Try these prompts to test your agent:
 ## 📁 Project Structure
 
 ```
-ai_news_chatbot_adk/
-├── ai_news_chatbot_adk/       # ADK package directory
-│   ├── __init__.py            # Package initialization with root_agent
-│   └── agent.py               # Main AI News Agent definition
-├── agent.py                   # Agent definition (legacy location)
-├── app.py                     # Streamlit web interface
-├── .env.example               # Environment variables template
-├── .env                       # Your API keys (create from .env.example)
-├── requirements.txt           # Python dependencies
-├── pyproject.toml            # Modern Python package config
-├── run.sh                    # macOS/Linux runner script
-├── run_streamlit.sh          # Streamlit runner script
-├── setup.sh                  # Setup script
-└── README.md                 # This file
+adk_practice/
+├── ai_news_chatbot_adk/           # ADK package directory
+│   ├── __init__.py                # Package initialization with root_agent
+│   └── agent.py                   # Main AI News Agent definition
+├── backend_server.py              # FastAPI backend server
+├── streamlit_app.py               # Streamlit web interface
+├── .env.example                   # Environment variables template
+├── .env                           # Your API keys (create from .env.example)
+├── requirements.txt               # Python dependencies
+├── run.sh                         # macOS/Linux runner script
+├── run.bat                        # Windows runner script (created)
+├── run_all.sh                     # Run both backend and frontend
+├── run_backend.sh                 # Backend runner script
+├── run_frontend.sh                # Frontend runner script
+├── Git_helper.md                  # Git setup guide for Windows
+├── SETUP_GUIDE.md                 # Additional setup information
+└── README.md                      # This file
 ```
 
 ## 🔧 Troubleshooting
@@ -487,6 +492,13 @@ pip install -r requirements.txt
 # Or reinstall uv
 pip install --upgrade uv
 ```
+
+#### 7. Windows Defender/Antivirus Blocking
+If Windows Defender or antivirus software blocks Python:
+- Add your project folder to Windows Defender exclusions
+- Add Python installation folder (usually `C:\Users\YourName\AppData\Local\Programs\Python\`) to exclusions
+- Temporarily disable real-time protection during installation
+- Choose "Allow" when Windows SmartScreen shows warnings about Python scripts
 
 ## 🤝 Contributing
 
