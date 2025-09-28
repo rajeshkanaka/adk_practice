@@ -272,7 +272,7 @@ notepad .env
 
 ```env
 # Replace with your actual Google API key from https://ai.google.dev/
-GOOGLE_API_KEY=your_actual_api_key_here
+GOOGLE_API_KEY='your_actual_api_key_here'
 
 # Set to FALSE to use Google AI Studio API
 GOOGLE_GENAI_USE_VERTEXAI=FALSE
