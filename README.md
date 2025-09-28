@@ -323,7 +323,8 @@ Since Windows doesn't have shell scripts, create a batch file:
 ```batch
 @echo off
 echo Starting AI News Chatbot ADK...
-.venv\Scripts\activate.bat && python -m google.adk.cli web
+call .venv\Scripts\activate.bat
+python -m google.adk.cli web
 pause
 ```
 3. Double-click `run.bat` to run the application
