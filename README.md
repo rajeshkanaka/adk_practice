@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="chatbot_workshop.png" alt="AI News Chatbot Workshop" width="900" />
+</p>
+
 # AI News Chatbot ADK
 
 An intelligent AI news assistant built with Google's Agent Development Kit (ADK) that searches the web for the latest AI developments and provides accurate, up-to-date information.
